@@ -15,3 +15,5 @@ a<-group_by(data,data$AgeOld)%>%
 a<-as.data.frame(a)
 a<-rbind(a,c(1,0))
 names(a)<-c("AgeOld","Count")
+
+b<-b[order(b$AgeOld),]
