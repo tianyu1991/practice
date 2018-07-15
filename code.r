@@ -4,3 +4,8 @@ names(x)<-c("a1","a2")
 intial<-read.table("datatable.txt",nrows=100)
 classes<-sapply(initial,class)
 tabAll<-read.table("data.txt",colClasses=classes)
+
+
+ gather(df, key, value, -owner) %>%
++   group_by(owner, key, value) %>%
++ summarize(n=n())
